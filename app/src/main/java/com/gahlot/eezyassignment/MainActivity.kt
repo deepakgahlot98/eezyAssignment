@@ -1,16 +1,22 @@
 package com.gahlot.eezyassignment
 
 import CalendarAdapter
+import android.annotation.SuppressLint
+import android.app.ActionBar
 import android.os.Build
 import android.os.Bundle
 import android.transition.AutoTransition
 import android.transition.TransitionManager
+import android.view.Gravity
 import android.view.View
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.action_bar.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -43,9 +49,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        setSupportActionBar(findViewById(R.id.my_toolbar))
-        actionBar?.title = "My Plan"
+        setToolbar()
 
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(calendar_recycler_view)
@@ -53,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         lastDayInCalendar.add(Calendar.MONTH, 6)
 
         setUpCalendar()
-
         evening_card_default.setOnClickListener{
             if (evening_card_detail.visibility  == View.GONE) {
                 TransitionManager.beginDelayedTransition(evening_card, AutoTransition())
@@ -72,6 +75,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    fun setToolbar() {
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        toolbar_title?.text = "My Plan"
     }
 
     private fun setUpCalendar(changeMonth: Calendar? = null) {
