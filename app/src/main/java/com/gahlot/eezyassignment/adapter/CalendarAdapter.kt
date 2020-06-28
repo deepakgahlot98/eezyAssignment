@@ -1,5 +1,6 @@
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.util.Log.*
 import android.view.LayoutInflater
 import android.view.View
@@ -81,14 +82,16 @@ class CalendarAdapter(private val context: Context,
                         notifyDataSetChanged()
                     }
 
-                    if (index == position)
+                    if (index == position) {
                         makeItemSelected(holder)
+                    }
                     else {
                         if (displayDay == selectedDay
                             && displayMonth == selectedMonth
                             && displayYear == selectedYear
-                            && selectCurrentDate)
+                            && selectCurrentDate) {
                             makeItemSelected(holder)
+                        }
                         else
                             makeItemDefault(holder)
                     }

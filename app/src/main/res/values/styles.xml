@@ -7,4 +7,12 @@
         <item name="colorAccent">#00ffff</item>
     </style>
 
+
+    <style name="CardView.custom">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
+    </style>
+
 </resources>

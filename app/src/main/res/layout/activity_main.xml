@@ -39,7 +39,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -62,31 +62,26 @@
             app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
         <TextView
-            android:id="@+id/txt_current_month"
+            android:id="@+id/txt_selected_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
             android:layout_marginTop="10dp"
-            android:alpha="0.5"
-            android:gravity="center"
+            android:alpha="0.6"
             android:text="current date"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:textSize="20sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button"
-            app:layout_constraintHorizontal_bias="0.019"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintVertical_bias="0.478" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="130dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
             android:background="@drawable/shadows"
             android:elevation="9dp"
             android:text="London, UK"
@@ -109,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <androidx.cardview.widget.CardView
-            style="@style/CardView.Light"
+            style="@style/CardView.custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -171,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/morning_card">
 
         <androidx.cardview.widget.CardView
-            style="@style/CardView.Light"
+            style="@style/CardView.custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -232,7 +227,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lunch_card">
 
         <androidx.cardview.widget.CardView
-            style="@style/CardView.Light"
+            style="@style/CardView.custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -294,7 +289,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/evening_card"
-            style="@style/CardView.Light"
+            style="@style/CardView.custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -784,7 +779,7 @@
         app:layout_constraintTop_toBottomOf="@id/evening">
 
         <androidx.cardview.widget.CardView
-            style="@style/CardView.Light"
+            style="@style/CardView.custom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
